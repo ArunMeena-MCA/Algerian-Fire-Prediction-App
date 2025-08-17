@@ -12,7 +12,8 @@ import traceback
 # Load env variables (optional)
 load_dotenv()
 
-app = Flask(__name__, static_folder="../frontend/dist", static_url_path="/")
+application = Flask(__name__, static_folder="../frontend/dist", static_url_path="/")
+app = application
 CORS(app)
 
 # === Load your scaler and model ===
