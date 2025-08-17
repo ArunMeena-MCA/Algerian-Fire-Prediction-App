@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+seaborn
+flask
+flask-cors
+joblib
+python-dotenv
