@@ -42,7 +42,7 @@ export default function App() {
         BUI: parseFloat(formData["Build Up Index (BUI)"])
       };
 
-      const { data } = await axios.post("/api/predict", { features });
+      const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/predict`, { features });
       setResult(data.prediction);
     } catch (err) {
       setError(err.response?.data?.error || err.message);
