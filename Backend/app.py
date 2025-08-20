@@ -14,7 +14,10 @@ load_dotenv()
 
 application = Flask(__name__, static_folder="../frontend/dist", static_url_path="/")
 app = application
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": [
+    "http://localhost:5173",  # Vite dev
+    "https://algerian-fire-prediction-app.vercel.app"  # Vercel prod
+]}})
 
 # === Load your scaler and model ===
 BASE_DIR = os.path.dirname(__file__)
