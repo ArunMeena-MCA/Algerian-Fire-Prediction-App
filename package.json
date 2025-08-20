@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "gunicorn": "^0.0.1-security"
+    "gunicorn": "^0.0.1-security",
+    "sklearn": "^1.0.0"
   }
 }
